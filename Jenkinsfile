@@ -5,22 +5,22 @@ pipeline {
     stages {
         stage('Git') {
       steps {
-        git 'https://github.com/jellywiz/calculator.git/'
+        git 'https://github.com/NooraNabil/react-2-mini.git/'
       }
     }
         stage('Build') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
         stage('Test'){
         	steps {
-        		bat 'npm run test'
+        		sh 'npm run test'
 			}
 		}
         stage('Deliver') {
             steps {
-                bat 'npm start run'
+                sh 'npm start run'
             }
         }
     }
